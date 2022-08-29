@@ -1,8 +1,28 @@
 /* wrapper */
-
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+
   width: 1024px;
   margin: 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+
+  text-align: center;
+  background-color: #212529;
+  color: white;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
 }
 
 /* array */
@@ -109,6 +129,7 @@
 
 .month_block li {
   list-style-type: none;
+  text-align: center;
 }
 
 .month_block li:nth-child(1n),
@@ -121,26 +142,15 @@
   width: calc(100% / 7);
 }
 
-.month_block li[attribute_is_this_month="false"] {
+.month_block li[attribute_is_this_month='false'] {
   color: grey;
   /* background-color: #fff !important; */
 }
 
-.month_block li[attribute_weekend_type="up"] {
+.month_block li[attribute_weekend_type='up'] {
   background-color: rgba(100, 149, 237, 0.2);
 }
 
-.month_block li[attribute_weekend_type="down"] {
+.month_block li[attribute_weekend_type='down'] {
   background-color: rgba(255, 207, 64, 0.3);
-}
-
-/* footer */
-.footer {
-  text-align: center;
-}
-
-.footer_author {
-  padding-top: 8px;
-  text-align: center;
-  color: rgb(235, 229, 229);
 }
