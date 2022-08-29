@@ -34,11 +34,21 @@ npm run start
 
 ```bash
 sudo apt install tree
-tree --charset ascii -I "node_modules|build"
+tree --charset ascii -a -I ".git|node_modules|build"
 ```
 
 ```
 .
+|-- .browserslistrc
+|-- .dockerignore
+|-- .eslintrc.js
+|-- .github
+|   `-- workflows
+|       |-- commit-other-repo.yml
+|       `-- docker-publish.yml
+|-- .gitignore
+|-- .prettierignore
+|-- .prettierrc.json
 |-- Dockerfile
 |-- LICENSE
 |-- Makefile
@@ -88,5 +98,5 @@ tree --charset ascii -I "node_modules|build"
             `-- getWeekType
                 `-- getWeekType.js
 
-14 directories, 34 files
+16 directories, 42 files
 ```
