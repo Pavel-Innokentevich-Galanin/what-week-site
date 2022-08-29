@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  frontend:
+    image: pavelinnokentevichgalanin/what-univer-weekend
+    ports:
+      - 80:80

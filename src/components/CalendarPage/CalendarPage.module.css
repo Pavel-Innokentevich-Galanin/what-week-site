@@ -1,0 +1,146 @@
+/* wrapper */
+
+.wrapper {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* array */
+
+.array {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.array > li {
+  list-style-type: none;
+  margin: 16px;
+}
+
+.array > li > .month_title {
+  background-color: #00a9b3;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.array > li > .days_block {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.array > li:nth-child(1) > .month_title,
+.array > li:nth-child(2) > .month_title,
+.array > li:nth-child(3) > .month_title {
+  background-color: #e54a22;
+}
+
+.array > li:nth-child(1) > .days_block,
+.array > li:nth-child(2) > .days_block,
+.array > li:nth-child(3) > .days_block {
+  background-color: #fe724f;
+}
+
+.array > li:nth-child(4) > .month_title,
+.array > li:nth-child(5) > .month_title,
+.array > li:nth-child(6) > .month_title {
+  background-color: #00a9b3;
+}
+
+.array > li:nth-child(4) > .days_block,
+.array > li:nth-child(5) > .days_block,
+.array > li:nth-child(6) > .days_block {
+  background-color: #00c7d1;
+}
+
+.array > li:nth-child(7) > .month_title,
+.array > li:nth-child(8) > .month_title,
+.array > li:nth-child(9) > .month_title {
+  background-color: #63b818;
+}
+
+.array > li:nth-child(7) > .days_block,
+.array > li:nth-child(8) > .days_block,
+.array > li:nth-child(9) > .days_block {
+  background-color: #72dc22;
+}
+
+.array > li:nth-child(10) > .month_title,
+.array > li:nth-child(11) > .month_title,
+.array > li:nth-child(12) > .month_title {
+  background-color: #ff9f00;
+}
+
+.array > li:nth-child(10) > .days_block,
+.array > li:nth-child(11) > .days_block,
+.array > li:nth-child(12) > .days_block {
+  background-color: #fec700;
+}
+
+/* days_block */
+.days_block {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.days_block li {
+  list-style-type: none;
+  width: calc(100% / 7);
+}
+
+/* month_block */
+
+.month_block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.month_block li {
+  list-style-type: none;
+}
+
+.month_block li:nth-child(1n),
+.month_block li:nth-child(2n),
+.month_block li:nth-child(3n),
+.month_block li:nth-child(4n),
+.month_block li:nth-child(5n),
+.month_block li:nth-child(6n),
+.month_block li:nth-child(7n) {
+  width: calc(100% / 7);
+}
+
+.month_block li[attribute_is_this_month="false"] {
+  color: grey;
+  /* background-color: #fff !important; */
+}
+
+.month_block li[attribute_weekend_type="up"] {
+  background-color: rgba(100, 149, 237, 0.2);
+}
+
+.month_block li[attribute_weekend_type="down"] {
+  background-color: rgba(255, 207, 64, 0.3);
+}
+
+/* footer */
+.footer {
+  text-align: center;
+}
+
+.footer_author {
+  padding-top: 8px;
+  text-align: center;
+  color: rgb(235, 229, 229);
+}
