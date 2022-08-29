@@ -43,16 +43,19 @@ const CalendarPage = (props) => {
           />
         </p>
         <h2 align="center">
-          <font
+          {'Расписание '}
+          <span
             style={{ backgroundColor: 'rgba(100, 149, 237, 0.2)' }}
-            children="Верхнии"
+            children="верхних"
           />
           {' и '}
-          <font
+          <span
             style={{ backgroundColor: 'rgba(255, 207, 64, 0.3)' }}
-            children="нижнии"
+            children="нижних"
           />
-          {` недели за ${year}-${DateController.getNextYear(year)} гг.`}
+          {' недель на '}
+          {` ${year}/${DateController.getNextYear(year)} `}
+          {' учебный год'}
         </h2>
 
         <ul className={styles.array}>
