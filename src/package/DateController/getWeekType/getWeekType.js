@@ -54,7 +54,6 @@ function getWeekType(string_date) {
       return 'down';
     }
   } catch (e) {
-    console.log(e);
     return '' + e;
   }
 }
