@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/what-univer-weekend/static/css/main.7f08481e.css",
+    "main.css": "/what-univer-weekend/static/css/main.b3ca47b5.css",
     "main.js": "/what-univer-weekend/static/js/main.f8ea8aac.js",
     "static/media/Inter.var.woff2?v=3.18": "/what-univer-weekend/static/media/Inter.var.9df5db385c3370707c5b.woff2",
     "static/media/Inter-italic.var.woff2?v=3.18": "/what-univer-weekend/static/media/Inter-italic.var.b27297c148a7ef314ce2.woff2",
@@ -42,11 +42,11 @@
     "static/media/Inter-Thin.woff2?v=3.18": "/what-univer-weekend/static/media/Inter-Thin.de9194d1cf4ce0dd3b56.woff2",
     "static/media/Inter-Regular.woff2?v=3.18": "/what-univer-weekend/static/media/Inter-Regular.6cc68d6b835a3dd06e7e.woff2",
     "index.html": "/what-univer-weekend/index.html",
-    "main.7f08481e.css.map": "/what-univer-weekend/static/css/main.7f08481e.css.map",
+    "main.b3ca47b5.css.map": "/what-univer-weekend/static/css/main.b3ca47b5.css.map",
     "main.f8ea8aac.js.map": "/what-univer-weekend/static/js/main.f8ea8aac.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f08481e.css",
+    "static/css/main.b3ca47b5.css",
     "static/js/main.f8ea8aac.js"
   ]
 }
