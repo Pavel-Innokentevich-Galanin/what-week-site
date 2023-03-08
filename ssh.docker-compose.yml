@@ -2,6 +2,6 @@ version: '3'
 
 services:
   frontend:
-    image: pavelinnokentevichgalanin/what-univer-weekend
+    image: pavelinnokentevichgalanin/what-week-site
     ports:
       - 80:80

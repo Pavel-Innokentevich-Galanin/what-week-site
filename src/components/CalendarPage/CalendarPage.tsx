@@ -4,12 +4,22 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 import styles from './CalendarPage.module.css';
-import DateController from './../../package/DateController/DateController';
+import DateController from '../../package/DateController/DateController';
 
-const CalendarPage = (props) => {
+const CalendarPage = () => {
   let navigate = useNavigate();
   const { year } = useParams();
-  const [calendar, setCalendar] = useState([]);
+  const [calendar, setCalendar] = useState([
+    {
+      month: 9,
+      dates: [
+        {
+          date: '',
+          isThisMonth: false,
+        },
+      ],
+    },
+  ]);
 
   useEffect(() => {
     const year_calendar = DateController.getUniversityYearCalendar(year);
@@ -29,33 +39,33 @@ const CalendarPage = (props) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <p align="center">
+        <p style={{ textAlign: 'center' }}>
           <button
             onClick={prev}
-            title="Просмотреть календарь за прошлый год"
-            children={'<--'}
+            title="Прагледзець каляндар за мінулы год"
+            children={'<- папярэдні'}
           />
           {` ${year} `}
           <button
             onClick={next}
-            title="Просмотреть календарь на следующий год"
-            children={'-->'}
+            title="Прагледзець каляндар на наступны год"
+            children={'наступны ->'}
           />
         </p>
-        <h2 align="center">
-          {'Расписание '}
+        <h2 style={{ textAlign: 'center' }}>
+          {'Расклад '}
           <span
             style={{ backgroundColor: 'rgba(100, 149, 237, 0.2)' }}
-            children="верхних"
+            children="верхніх"
           />
-          {' и '}
+          {' і '}
           <span
             style={{ backgroundColor: 'rgba(255, 207, 64, 0.3)' }}
-            children="нижних"
+            children="ніжніх"
           />
-          {' недель на '}
+          {' тыдняў на '}
           {` ${year}/${DateController.getNextYear(year)} `}
-          {' учебный год'}
+          {' навучальны год'}
         </h2>
 
         <ul className={styles.array}>
@@ -66,7 +76,7 @@ const CalendarPage = (props) => {
               <li key={i}>
                 <div className={styles.month_title}>{month_string}</div>
                 <ul className={styles.days_block}>
-                  {['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'].map((element) => {
+                  {['Пн', 'Аў', 'Ср', 'Чц', 'Пт', 'Сб', 'Нд'].map((element) => {
                     return <li key={element}>{element}</li>;
                   })}
                 </ul>
@@ -74,13 +84,13 @@ const CalendarPage = (props) => {
                   {dates.map((element, i) => {
                     const { date, isThisMonth } = element;
                     const d = new Date(date);
-                    const weekend_type = DateController.getWeekType(d);
+                    const weekend_type = DateController.getWeekType(d.toJSON());
                     const d_d = d.getDate();
                     return (
                       <li
                         key={i}
-                        attribute_is_this_month={isThisMonth ? 'true' : 'false'}
-                        attribute_weekend_type={weekend_type}
+                        data-attribute_is_this_month={isThisMonth ? 'true' : 'false'}
+                        data-attribute_weekend_type={weekend_type}
                         children={d_d}
                       />
                     );
@@ -90,31 +100,19 @@ const CalendarPage = (props) => {
             );
           })}
         </ul>
-        <p>
-          Верхняя неделя начинается с первого сентября. Когда заканчивается I'ый
-          семестр и начинается II'ой семестр, то отчёт продолжается с 1-го
-          сентября.
-        </p>
-        <p>
-          Сделал подсветку верхних и нижних недель. Так как июль-август
-          каникулы, то не подсвечивал.
-        </p>
       </div>
       <footer className={styles.footer}>
-        <p>Написано на React'e с любовью от группы ПО-4</p>
+        <p>Студэнт 4 курса VIII семестра факультэта ЭИС групы ПЗ-4 (ПО-4)</p>
         <p>
-          Ставь звезду, клонируй и редактируй код на GitHub:{' '}
           <a
-            href="https://github.com/Pavel-Innokentevich-Galanin/what-univer-weekend"
-            title="Открыть репозиторий с кодом"
-            children={'Pavel-Innokentevich-Galanin/what-univer-weekend'}
+            href="https://github.com/Pavel-Innokentevich-Galanin"
+            title="GitHub праграміста"
+            children={'Pavel-Innokentevich-Galanin'}
           />
         </p>
       </footer>
     </div>
   );
 };
-
-CalendarPage.propTypes = {};
 
 export default CalendarPage;

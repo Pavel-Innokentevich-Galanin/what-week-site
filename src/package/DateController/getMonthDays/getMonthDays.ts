@@ -1,3 +1,8 @@
+interface MonthDayInterface {
+  date: string;
+  isThisMonth: boolean;
+}
+
 /**
  * Функция сгенерирует массив текущего месяца c 42 элементами
  * с пустотами спереди по понедельник
@@ -6,7 +11,7 @@
  * @param {*} month - месяц
  * @returns {array}
  */
-export default function getMonthDays(year, month) {
+export default function getMonthDays(year: string, month: string): Array<MonthDayInterface> {
   let array = [];
 
   let temp = new Date(`${year}-${month}-1 00:00`);
