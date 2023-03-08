@@ -1,8 +1,8 @@
 import getPrevYear from './getPrevYear';
 
 test('getPrevYear() Получили предыдущий год?', () => {
-  expect(getPrevYear(2022)).toBe('2021');
-  expect(getPrevYear(2021)).toBe('2020');
+  expect(getPrevYear('2022')).toBe('2021');
+  expect(getPrevYear('2021')).toBe('2020');
 
   expect(getPrevYear('2020')).toBe('2019');
   expect(getPrevYear('2019')).toBe('2018');

@@ -1,11 +1,11 @@
 /**
  * Функция возвращает сообщение о типе недели (верхняя или нижняя)
  */
-function getWeekType(string_date) {
+function getWeekType(string_date: string) {
   try {
     let d = new Date(string_date);
 
-    if (d === 'Invalid Date') {
+    if (isNaN(d.getTime())) { // Invalid Date
       d = new Date();
     }
 
@@ -28,7 +28,7 @@ function getWeekType(string_date) {
     }
 
     let weeks = []; // Массив недель. Массив массивов дней недели
-    let days = []; // Массив дней недели
+    let days: string[] = []; // Массив дней недели
     for (let i = 0; i < 365; ++i) {
       if (d.getDay() === 1) {
         // Если это первый день недели, то добавить в массив недель
@@ -65,7 +65,7 @@ function getWeekType(string_date) {
  * [Если чётное число (индексация от нуля) - верхняя неделя]
  * [Если нечётное число - нижняя неделя]
  */
-function getWeekIndex(weeks = [[]], d1 = new Date()) {
+function getWeekIndex(weeks: string[][], d1 = new Date()) {
   let date_1 = d1.getDate(); // Определяю текущий день
   let mount_1 = d1.getMonth(); // Определяю текущий месяц
   for (let i = 0; i < weeks.length; ++i) {

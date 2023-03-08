@@ -1,8 +1,8 @@
 import getNextYear from './getNextYear';
 
 test('getNextYear() Получили следующий год?', () => {
-  expect(getNextYear(2022)).toBe('2023');
-  expect(getNextYear(2021)).toBe('2022');
+  expect(getNextYear('2022')).toBe('2023');
+  expect(getNextYear('2021')).toBe('2022');
 
   expect(getNextYear('2020')).toBe('2021');
   expect(getNextYear('2019')).toBe('2020');

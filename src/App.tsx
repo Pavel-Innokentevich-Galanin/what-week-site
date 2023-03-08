@@ -1,5 +1,3 @@
-import React from 'react';
-// import PropTypes from "prop-types";
 import { Route, Routes } from 'react-router';
 
 import HomePage from './components/HomePage/HomePage';
@@ -21,7 +19,7 @@ const paths = [
   },
 ];
 
-const App = (props) => {
+function App() {
   return (
     <Routes>
       {paths.map((elem, i) => {
@@ -30,8 +28,6 @@ const App = (props) => {
       })}
     </Routes>
   );
-};
-
-App.propTypes = {};
+}
 
 export default App;
