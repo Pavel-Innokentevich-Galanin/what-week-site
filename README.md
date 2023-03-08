@@ -41,6 +41,7 @@ sudo apt install -y docker.io docker-compose
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 newgrp docker
+reboot
 ```
 
 ### Клонирование репозитория

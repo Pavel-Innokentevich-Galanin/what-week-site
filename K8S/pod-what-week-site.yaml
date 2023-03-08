@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: what-week-site
+spec:
+  containers:
+    - name: container-what-week-site
+      image: pavelinnokentevichgalanin/what-week-site:latest
+      ports:
+        - containerPort: 80
