@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: what-week-site-deployment
+  labels:
+    app: what-week-site-k8s-application
+spec:
+  selector:
+    matchLabels:
+      project: ph
+  template:
+    metadata:
+      labels:
+        project: ph
+    spec:
+      containers:
+        - name: container-what-week-site
+          image: pavelinnokentevichgalanin/what-week-site:latest
+          ports:
+            - containerPort: 80
