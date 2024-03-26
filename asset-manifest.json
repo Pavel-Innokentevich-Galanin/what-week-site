@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/what-week-site/static/css/main.013f9cf4.css",
-    "main.js": "/what-week-site/static/js/main.cb63d15c.js",
-    "static/js/787.7bdbad8a.chunk.js": "/what-week-site/static/js/787.7bdbad8a.chunk.js",
-    "index.html": "/what-week-site/index.html",
-    "main.013f9cf4.css.map": "/what-week-site/static/css/main.013f9cf4.css.map",
-    "main.cb63d15c.js.map": "/what-week-site/static/js/main.cb63d15c.js.map",
-    "787.7bdbad8a.chunk.js.map": "/what-week-site/static/js/787.7bdbad8a.chunk.js.map"
+    "main.css": "/2022-what-week-site/static/css/main.a610a088.css",
+    "main.js": "/2022-what-week-site/static/js/main.f0fe71e8.js",
+    "static/js/787.7bdbad8a.chunk.js": "/2022-what-week-site/static/js/787.7bdbad8a.chunk.js",
+    "index.html": "/2022-what-week-site/index.html",
+    "main.a610a088.css.map": "/2022-what-week-site/static/css/main.a610a088.css.map",
+    "main.f0fe71e8.js.map": "/2022-what-week-site/static/js/main.f0fe71e8.js.map",
+    "787.7bdbad8a.chunk.js.map": "/2022-what-week-site/static/js/787.7bdbad8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.013f9cf4.css",
-    "static/js/main.cb63d15c.js"
+    "static/css/main.a610a088.css",
+    "static/js/main.f0fe71e8.js"
   ]
 }
